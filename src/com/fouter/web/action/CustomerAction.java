@@ -12,6 +12,7 @@ import org.hibernate.criterion.Restrictions;
 import com.fouter.domain.Customer;
 import com.fouter.service.CustomerService;
 import com.fouter.service.impl.CustomerServiceImpl;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.sun.org.apache.regexp.internal.recompile;
@@ -35,7 +36,7 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 		
 		List<Customer> list = cs.getAll(dc);
 		
-		ServletActionContext.getRequest().setAttribute("list", list);
+		ActionContext.getContext().put("list", list);
 		
 		return "list";
 	}

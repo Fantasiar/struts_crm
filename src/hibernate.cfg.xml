@@ -33,6 +33,6 @@
 		 -->
 		<mapping resource="com/fouter/domain/Customer.hbm.xml" />
 		<mapping resource="com/fouter/domain/LinkMan.hbm.xml" />
-
+		<mapping resource="com/fouter/domain/User.hbm.xml" />	
 	</session-factory>
 </hibernate-configuration>
